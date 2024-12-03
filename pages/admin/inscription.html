@@ -1,0 +1,82 @@
+<?php
+    include ("../inc/data.php");
+    if(isset($_SESSION['login'])){
+        header("location:../index.php");
+        exit();
+}
+?>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="../assets/CSS/login.css">
+    <link rel="stylesheet" href="../assets/CSS/bootstrap.css">
+</head>
+<body>
+    <div class="_container">
+        <!-- TO DO: Element du conteneur violet -->
+        <div class="inscription color1 swipeRight">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 text-center" style="margin-top: 5rem">
+                <h1 class="text1">Mini Library</h1>
+                <h2>- S'inscrire -</h2>
+
+                <a href="login.html"><button class="slideButton">< Se connecter</button></a>
+            </div>
+        </div>
+
+
+        <!-- INFO: NE rien changer -->
+        <div class="right zoomOut">
+            <div class="formLogin">
+                <form action="" method="POST">
+                    <input type="text" class="btn-block margin1 login_input" name="email" placeholder="Adresse e-mail">
+                    <input type="password" class="btn-block margin1 login_input" name="email" placeholder="Mot de passe">
+                    <input type="submit" class="btn-block margin1 login_submit" value="Se connecter">
+                </form>
+                <p>
+                    ou
+                </p>
+
+                <a href="inscription.php" style="color: #533dcc; text-decoration: underline">Creer un nouveau compte</a>
+            </div>
+        </div>
+        <!-- INFO: Jusqu'ici -->
+
+
+        <!-- TO DO: Formulaire inscription -->
+        <div class="left zoomIn">
+            <div class="formLogin" style="margin-top: 18%">
+                <form action="genre.html" method="POST">
+                    <input type="text" class="btn-block margin1 login_input" name="nom" placeholder="Nom">
+                    <input type="text" class="btn-block margin1 login_input" name="email" placeholder="Adresse e-mail">
+                    <input type="password" class="btn-block margin1 login_input" name="mdp" placeholder="Mot de passe">
+                    <p>Genre</p>
+                    <div class="input-group btn-block margin1">
+                        <input type="radio" id="c1" name="genre" value="homme">
+                        <label for="c1">Homme</label>
+                        <input type="radio" id="c2" name="genre" value="femme">
+                        <label for="c2">Femme</label>
+                    </div>
+
+                    <!-- TO DO: Lien vers la page de traitement pour inscription -->
+                    <input type="submit" class="btn-block margin1 login_submit" value="Creer mon compte">
+                </form>
+                <p>
+                    ou
+                </p>
+
+                <!-- TO DO: lien vers la page login -->
+                <a href="login.html" style="color: #533dcc; text-decoration: underline">Se connecter a votre compte</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
