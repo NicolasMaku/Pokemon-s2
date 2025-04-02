@@ -22,7 +22,7 @@
         <a class="" href="modele.php?page=accueil/index">
             <div class="_row full_width">
                 <img src="../assets/icon/home.svg" alt="">
-                <span class="navlabel">Accueil</span>
+                <span class="navlabel">Accueil v2</span>
             </div>
         </a>
         <a class="row" href="modele.php?page=marketplace/index">

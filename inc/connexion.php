@@ -3,8 +3,8 @@
         static $bdd = null;
 
         if ($bdd == null) {
-//            $database = mysqli_connect("172.10.194.173", 'replicator','root','pokemon', 3307);
             $database = mysqli_connect("localhost", 'replicator','root','pokemon', 3306);
+//            $database = mysqli_connect("localhost", 'replicator','root','pokemon', 3306);
         }
 
         return $database;
