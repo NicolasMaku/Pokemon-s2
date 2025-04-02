@@ -2,8 +2,9 @@
     function logBd(){
         static $bdd = null;
 
+        // 172.30.153.65
         if ($bdd == null) {
-            $database = mysqli_connect("localhost", 'replicator','root','pokemon', 3306);
+            $database = mysqli_connect("172.30.153.65", 'replicator','root','pokemon', 3307);
 //            $database = mysqli_connect("localhost", 'replicator','root','pokemon', 3306);
         }
 
@@ -13,9 +14,9 @@
     function customSessionStart() {
         include "DBSessionHandler.php";
 
-        $host = 'localhost'; // Adresse du serveur MySQL
+        $host = '172.30.153.65'; // Adresse du serveur MySQL
         $dbname = 'cluster'; // Nom de la base de données
-        $username = 'root'; // Nom d'utilisateur MySQL
+        $username = 'replicator'; // Nom d'utilisateur MySQL
         $password = 'root'; // Mot de passe MySQL
 
 
